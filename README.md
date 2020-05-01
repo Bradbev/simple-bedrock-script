@@ -74,13 +74,24 @@ Now you need to add the packs to your world. The files to edit are:
 
     \server\worlds\your_world\world_behavior_packs.json
     \server\worlds\your_world\world_resource_packs.json
+    
+You may need to create these files new.
 
 The formatting is different, but you add the uuid and version like this:
-
+    
     {
         "pack_id" : "b2d39a5c-f5c5-11e8-8eb2-f2801f1b9fd1",
         "version" : [ 1, 8, 0 ]
     }
+    
+Note: If creating this file, make sure you add inside `[]` ie:
+
+    [
+        {
+            "pack_id" : "b2d39a5c-f5c5-11e8-8eb2-f2801f1b9fd1",
+            "version" : [ 1, 8, 0 ]
+        }
+    ]
 
 If successful, it will prompt a connecting client (e.g. iPhone) to download the resource pack. (You did require that in `server.properties`, yes?That tells you it's all working fine.
 
